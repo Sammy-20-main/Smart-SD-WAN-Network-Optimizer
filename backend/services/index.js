@@ -8,6 +8,8 @@
  *   slaVerification.js      - 3.4 SLA Verification
  *   costOptimization.js     - 3.5 Cost Optimization Engine
  *   routeOptimizationEngine.js - orchestrates all five in sequence
+ *
+ * Module 4 (Analytics & Reporting) lives in ./analytics/ - see analyticsEngine.js.
  */
 
 export { runRouteOptimization } from './routeOptimizationEngine.js';
@@ -16,6 +18,11 @@ export { annotateAllPaths } from './relaySelection.js';
 export { calculateAllLatencies } from './latencyCalculator.js';
 export { verifySlaCompliance, getComplianceSummary } from './slaVerification.js';
 export { calculateAllCosts, selectOptimalRoute } from './costOptimization.js';
+
+// Module 4 - Analytics & Reporting
+export { runAnalytics, ANALYTICS_COMPONENTS } from './analytics/analyticsEngine.js';
+export { buildCsv, buildCsvTables, toCsv } from './analytics/reportExport.js';
+export { buildPdf } from './analytics/pdfReport.js';
 
 export const rnsrService = {
   getOverview: () => {

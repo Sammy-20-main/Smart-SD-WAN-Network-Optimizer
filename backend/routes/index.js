@@ -1,6 +1,8 @@
 import express from 'express';
 import { initialNetworkTopology } from '../data/index.js';
 import { runRouteOptimization, rnsrService } from '../services/index.js';
+import analyticsRoutes from './analytics.js';
+import databaseRoutes from './database.js';
 
 const router = express.Router();
 
@@ -61,5 +63,11 @@ router.post('/optimize', (req, res) => {
     return res.status(400).json({ success: false, error: err.message });
   }
 });
+
+// MODULE 4: Analytics & Reporting (presets, analytics, CSV/PDF export)
+router.use('/', analyticsRoutes);
+
+// Database-backed networks, saved runs and telemetry
+router.use('/', databaseRoutes);
 
 export default router;

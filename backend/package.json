@@ -1,6 +1,6 @@
 {
   "name": "smart-sdwan-backend",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Backend API for Smart SD-WAN Network Optimizer (RNSR College Project)",
   "main": "server.js",
   "type": "module",
@@ -17,7 +17,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^11.10.0",
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pdfkit": "^0.17.2"
   }
 }

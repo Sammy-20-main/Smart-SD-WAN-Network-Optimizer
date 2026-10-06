@@ -23,7 +23,12 @@ export function runRouteOptimization({ nodes, links, sourceId, destinationId, sl
   }
 
   // 3.1 Route Discovery
-  const { nodeMap, paths: rawPaths } = discoverPaths({ nodes, links, sourceId, destinationId });
+  const { nodeMap, paths: rawPaths, truncated } = discoverPaths({
+    nodes,
+    links,
+    sourceId,
+    destinationId
+  });
 
   if (rawPaths.length === 0) {
     return {
@@ -52,6 +57,7 @@ export function runRouteOptimization({ nodes, links, sourceId, destinationId, sl
     sourceId,
     destinationId,
     slaLimit: Number(slaLimit),
+    pathsTruncated: truncated,
     allPaths: paths,
     compliantPathsCount,
     optimizedPath,
