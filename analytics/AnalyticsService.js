@@ -12,7 +12,6 @@ function getSimulationResults() {
   const now = Date.now();
   const records = [];
 
-  // simple seeded PRNG so mock data is stable across requests while testing
   let seed = 7;
   const rand = () => {
     seed = (seed * 9301 + 49297) % 233280;
