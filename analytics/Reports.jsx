@@ -10,7 +10,7 @@ import {
   fetchNetworkHealth,
   csvExportUrl,
   pdfExportUrl,
-} from "../services/analyticsService";
+} from "./analyticsApi";
 
 const TABS = [
   { id: "dashboard", label: "Performance Dashboard" },

@@ -1,5 +1,5 @@
 /**
- * MODULE 4 : ANALYTICS & REPORTING MODULE service layer
+ * MODULE 4 : ANALYTICS & REPORTING MODULE — service layer
  * Smart SD-WAN Network Optimizer
  */
 
